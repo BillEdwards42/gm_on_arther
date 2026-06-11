@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   # --- 1. FastAPI Application ---
   api:
@@ -24,6 +22,9 @@ services:
     depends_on:
       db:
         condition: service_healthy
+    networks:
+      - default
+      - cloudflare-network # Connect to the global Cloudflare Tunnel network
 
   # --- 2. PostgreSQL Database ---
   db:
@@ -44,14 +45,10 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
+    networks:
+      - default
 
-  # --- 3. Cloudflare Tunnel ---
-  cloudflared:
-    image: cloudflare/cloudflared:latest
-    container_name: gm-cloudflared
-    restart: unless-stopped
-    command: tunnel --no-autoupdate run
-    environment:
-      - TUNNEL_TOKEN=${CLOUDFLARE_TUNNEL_TOKEN}
-    depends_on:
-      - api
+# Define the external network so Docker Compose knows it exists elsewhere
+networks:
+  cloudflare-network:
+    external: true
