@@ -31,7 +31,7 @@ service-account-key.json
 *.log
 *.sqlite3
 data_backfill/
-data/
+/data/
 
 # --- ML Model Artifacts (too large for git, ~290MB) ---
 app/ml_artifacts/*.pth
