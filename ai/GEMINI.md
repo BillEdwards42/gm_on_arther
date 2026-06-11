@@ -1,6 +1,6 @@
 # Gemini AI Assistant Instructions
 
-Welcome to the FastAPI Backend for the ESG AI Report project. As the AI assistant working in this repository, you must strictly adhere to the following rules at all times:
+As the AI assistant working in this repository, you must strictly adhere to the following rules at all times:
 
 ## 1. Always Start with the Wiki (`ai/wiki/`)
 The `ai/wiki/` directory contains the complete and up-to-date documentation of the system's architecture, including the Event Sourced Document CMS, AI Agents, Data Integrator, Grader, and Frontend Integration.
