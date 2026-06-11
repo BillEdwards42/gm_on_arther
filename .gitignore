@@ -1,0 +1,41 @@
+# --- Python & Compilation ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- Virtual Environments ---
+venv/
+env/
+.venv/
+
+# --- IDEs & Editors ---
+.vscode/
+.idea/
+.DS_Store
+
+# --- Testing ---
+.pytest_cache/
+.coverage
+htmlcov/
+
+# --- SECRETS (CRITICAL) ---
+.env
+.env.*
+credentials.json
+service-account-key.json
+*.key
+*.pem
+
+# --- Data & Logs ---
+*.log
+*.sqlite3
+data_backfill/
+data/
+
+# --- ML Model Artifacts (too large for git, ~290MB) ---
+app/ml_artifacts/*.pth
+app/ml_artifacts/*.pkl
+
+# --- Docker ---
+docker-compose.override.yml

@@ -1,0 +1,10 @@
+.gcloudignore
+.git
+.gitignore
+venv/
+__pycache__/
+*.pyc
+*.ipynb
+data_backfill/
+# ml_artifacts/*.pth -> Un-commented/Removed to ALLOW upload.
+*.log
